@@ -10,6 +10,9 @@ import {
   CardContent,
   FormControl,
   Grid,
+  InputLabel,
+  MenuItem,
+  Select,
   TextField,
   Typography,
 } from '@mui/material';
@@ -51,16 +54,11 @@ function App() {
     }
   };
 
-  const handleSearchChange = (event) => {
-    setSearchTerm(event.target.value);
-  };
-
   const handleSearchSubmit = async (event) => {
     // Add your search functionality here, e.g., navigate to search results page
     try {
       let temp = convertString(searchTerm);
       temp = phoneExists(temp);
-      //console.log(url + temp + `/price`);
       const res = await axios.get(url + temp + `/price`, {
         headers: {
           'Access-Control-Allow-Origin': '*',
@@ -77,8 +75,7 @@ function App() {
             'Origin, X-Requested-With, Content-Type, Accept',
         },
       });
-      //console.log('In res', noPriceRes.data);
-      //console.log('In res', res.data);
+
       setPhonePrices(res.data);
       setPhoneInfo(noPriceRes.data[0]);
       setPhoneInfoNotEmpty(true);
@@ -109,12 +106,38 @@ function App() {
             <Grid item xs={8} justifyContent='flex-end'>
               <FormControl fullWidth>
                 <TextField
-                  label='Search Term'
+                  label='Select a phone from drop menu'
                   value={searchTerm}
                   size='small'
                   variant='filled'
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
+                {/* <InputLabel id='demo-simple-select-label'>
+                  Select a phone from drop menu
+                </InputLabel>
+                <Select
+                  labelId='demo-simple-select-label'
+                  id='demo-simple-select'
+                  value={searchTerm}
+                  label='Select a phone from drop menu'
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                >
+                  <MenuItem value={1}>iPhone 15</MenuItem>
+                  <MenuItem value={2}>iPhone 15 Plus</MenuItem>
+                  <MenuItem value={3}>iPhone 15 Pro</MenuItem>
+                  <MenuItem value={4}>iPhone 15 Pro Max</MenuItem>
+                  <MenuItem value={5}>iPhone 14</MenuItem>
+                  <MenuItem value={6}>iPhone 14 Plus</MenuItem>
+                  <MenuItem value={7}>Galaxy S23</MenuItem>
+                  <MenuItem value={8}>Galaxy S23 Plus</MenuItem>
+                  <MenuItem value={9}>Galaxy S23 Ultra</MenuItem>
+                  <MenuItem value={10}>Galaxy S23 FE</MenuItem>
+                  <MenuItem value={11}>iPhone 14 Pro</MenuItem>
+                  <MenuItem value={12}>iPhone 14 Pro Max</MenuItem>
+                  <MenuItem value={13}>Galaxy S22</MenuItem>
+                  <MenuItem value={14}>Galaxy S22 Plus</MenuItem>
+                  <MenuItem value={15}>Galaxy S22 Ultra</MenuItem>
+                </Select> */}
               </FormControl>
             </Grid>
           </Grid>
