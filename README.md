@@ -21,6 +21,9 @@ The intended purpose of our application is to allow users to look up and compare
   If you click on the Login button at the top right it will lead you to a Login/Creating account screen.
   <img src=https://github.com/vietle96/CSE412-Final-Project/blob/bf89205409fcb7df3072f3bff232806a8f725922/Screenshots/4.png width="500">
 
+  If you are new and don't have an account with us, you can click create with the inserted information and you will be automatically logged in.
+  If you are a returning user, enter your username and password then click log in.
   <img src=https://github.com/vietle96/CSE412-Final-Project/blob/bf89205409fcb7df3072f3bff232806a8f725922/Screenshots/5.png width="500">
 
+  After logging in, you are able to choose a rating for the selected phone and click submit. This will update the rating average.
   <img src=https://github.com/vietle96/CSE412-Final-Project/blob/bf89205409fcb7df3072f3bff232806a8f725922/Screenshots/6.png width="500">
