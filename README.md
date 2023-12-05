@@ -8,3 +8,5 @@ The intended purpose of our application is to allow users to look up and compare
 
 # Walkthrough & Navigation
   Once setup is complete, the user can run the application and view the landing screen.
+
+  <img [Screenshots/1.png](https://github.com/vietle96/CSE412-Final-Project/blob/db0cb778178d63446bb216d0f4554f4120e08f8f/Screenshots/1.png)https://github.com/vietle96/CSE412-Final-Project/blob/db0cb778178d63446bb216d0f4554f4120e08f8f/Screenshots/1.png width="500">
