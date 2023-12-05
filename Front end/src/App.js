@@ -47,7 +47,7 @@ function App() {
   const [passwordInfo, setPasswordInfo] = useState('');
   const [isDisableRating, setIsDisableRating] = useState(true);
   // const url = `https://phone-app-backend.onrender.com/phone/`;
-  const url = `localhost:1121/phone/`;
+  const url = `http://localhost:1121/phone/`;
 
   const handleLogin = () => {
     if (!isClickedLogin) {
@@ -85,7 +85,7 @@ function App() {
 
       const res = await axios.post(
         // 'https://phone-app-backend.onrender.com/login',
-        'localhost:1121/login',
+        'http://localhost:1121/login',
         userJSON,
         {
           headers: {
@@ -132,7 +132,7 @@ function App() {
 
       const res = await axios.post(
         // 'https://phone-app-backend.onrender.com/register',
-        'localhost:1121/register',
+        'http://localhost:1121/register',
         userJSON,
         {
           headers: {
