@@ -6,3 +6,5 @@ The intended purpose of our application is to allow users to look up and compare
 
 
 
+# Walkthrough & Navigation
+  Once setup is complete, the user can run the application and view the landing screen.
